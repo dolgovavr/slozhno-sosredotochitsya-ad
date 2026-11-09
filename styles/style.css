@@ -65,6 +65,7 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .header__theme-menu {
@@ -79,10 +80,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.header__theme-menu-item {
-  list-style: none;
 }
 
 .header__theme-menu-button {
@@ -124,6 +121,7 @@
   line-height: 0.9;
   align-self: center;
   font-weight: bold;
+  margin-left: -10px;
 }
 
 .header__text {
@@ -132,6 +130,7 @@
   width: 355px;
   height: 117px;
   margin-top: 10px;
+  box-sizing: border-box;
 }
 
 .title-decor {
@@ -229,6 +228,7 @@
   display: grid;
   place-items: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .footer__title {
@@ -239,8 +239,10 @@
   line-height: 0.9;
   text-align: center;
   font-weight: bold;
+  margin-left: -10px;
 }
 
+/* --- ПЛАНШЕТ (от 768px) --- */
 @media (min-width: 768px) {
   .header {
     padding: 40px;
@@ -273,6 +275,7 @@
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
   }
 
   .header__text {
@@ -286,6 +289,7 @@
     gap: 60px;
   }
 
+  /* Первая секция */
   .section {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -300,6 +304,7 @@
     grid-column: 2;
   }
 
+  /* Вторая секция (Заголовок сверху, 3 колонки снизу) */
   .section_layout_columns-3 {
     display: flex;
     flex-direction: column;
@@ -316,6 +321,7 @@
     width: 100%;
   }
 
+  /* Третья секция */
   .section_layout_stack .section__cards {
     display: flex;
     flex-direction: column;
@@ -333,6 +339,7 @@
     margin-top: 0;
   }
 
+  /* Галерея на планшете */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 260px 315px 315px 118px;
@@ -376,18 +383,28 @@
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
   }
 }
 
+/* --- ДЕСКТОП (от 1024px) --- */
 @media (min-width: 1024px) {
   .header__theme-menu {
     justify-self: center;
     align-self: start;
   }
 
+  .header__title {
+    margin-left: 0;
+  }
+
   .header__text {
     width: 491px;
     height: 70px;
     margin-top: 0;
+  }
+
+  .footer__title {
+    margin-left: 0;
   }
 }
