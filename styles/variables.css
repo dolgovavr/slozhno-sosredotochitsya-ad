@@ -6,7 +6,7 @@
   --title-shadow-color: #ff0070;
   --card-accent-bg: #ff0070;
   --card-accent-text: #000028;
-  --font-main: 'IBM Plex Mono', 'Menlo', monospace;
+  --font-main: 'IBM Plex mono', 'Menlo', monospace;
   --gap-main: 20px;
   --gap-card: 10px;
   --bg-image: url('../images/cover-image-dark.png');
